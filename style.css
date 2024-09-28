@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#popupContainer {
+  width: 250px;           /* רוחב קבוע */
+  height: 120px;          /* גובה קבוע */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #f1f1f1; /* צבע רקע */
+  border: 1px solid #ccc; /* גבול */
+  padding: 10px; /* רווח פנימי */
+  border-radius: 10px; /* עיגול הפינות */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה */
+  overflow: hidden; /* הסתרת תוכן החורג */
+}
+
+#timeSpent {
+  font-size: 24px; /* גודל טקסט */
+  font-weight: bold;
+  color: #333; /* צבע טקסט */
+}
+
+p {
+  margin: 5px 0; /* רווח סביב פסקאות */
+}
+
+button {
+  margin-top: 10px; /* רווח מעל כפתור */
+  padding: 10px; /* רווח פנימי בכפתור */
+  font-size: 16px; /* גודל טקסט בכפתור */
+  cursor: pointer; /* סמן לגרירה */
+}

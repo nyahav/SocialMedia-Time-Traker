@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Time Tracker Extension",
+  "version": "1.0",
+  "description": "Track time spent on social media sites.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Time Tracker"
+  }
+}
