@@ -1,35 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let isRunning = true; // Automatically set to true
+    let isRunning = true; 
     let intervalId;
     let totalSeconds = 0;
 
-    // List of known social media websites
-    const socialMediaSites = [
-        'facebook',
-        'twitter',
-        'instagram',
-        'linkedin',
-        'snapchat',
-        'tiktok',
-        'pinterest',
-        'youtube',
-        'reddit',
-        'whatsapp',
-        'twitch'
-    ];
-    const siteColors = {
-        facebook: '#3b5998',  // צבע פייסבוק
-        twitter: '#1DA1F2',   // צבע טוויטר
-        instagram: '#C13584', // צבע אינסטגרם
-        linkedin: '#0077B5',  // צבע לינקדאין
-        snapchat: '#FFFC00',   // צבע סנאפצ'ט
-        tiktok: '#69C9D0',     // צבע טיקטוק
-        pinterest: '#E60023',  // צבע פינטרסט
-        youtube: '#FF0000',    // צבע יוטיוב
-        reddit: '#FF4500',     // צבע רדיט
-        whatsapp: '#25D366',   // צבע וואטסאפ
-        twitch: '#9146FF'      // צבע טוויץ'
-    };
     function showCurrentWebsite() {
         chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
             const currentTab = tabs[0];
@@ -71,13 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'Unknown Site'; // Return 'Unknown Site' for invalid URLs
         }
     }
+
     function setBackgroundColorForSite(siteName) {
-        const color = siteColors[siteName]; // קבל את צבע הרקע מהאובייקט
+        const color = siteColors[siteName]; // Get the background color from the object
     
         if (color) {
-            document.body.style.backgroundColor = color; // שנה את צבע הרקע
+            document.body.style.backgroundColor = color; // Change the background color
         } else {
-            document.body.style.backgroundColor = 'white'; // צבע ברירת מחדל
+            document.body.style.backgroundColor = 'white'; // Default color
         }
     }
 
@@ -103,4 +77,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Automatically start the timer when the popup opens
     startTimer();
     showCurrentWebsite();
+    initializeDraggable();
 });

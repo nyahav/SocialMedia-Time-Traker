@@ -1,38 +1,33 @@
 body {
+  min-width: 200px; /* Minimum width */
+  min-height: 100px; /* Minimum height */
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
 }
 
-#popupContainer {
-  width: 250px;           /* רוחב קבוע */
-  height: 120px;          /* גובה קבוע */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  background-color: #f1f1f1; /* צבע רקע */
-  border: 1px solid #ccc; /* גבול */
-  padding: 10px; /* רווח פנימי */
-  border-radius: 10px; /* עיגול הפינות */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הצללה */
-  overflow: hidden; /* הסתרת תוכן החורג */
+#timerPopup {
+  position: absolute; /* Allow it to be positioned anywhere */
+  cursor: move; /* Change cursor to indicate drag */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Background color */
+  width: 100vw; /* Use percentage for responsive width */
+  height: 50vh; /* Use viewport height for responsive height */
+  max-width: 400px; /* Set a maximum width */
+  max-height: 400px; /* Set a maximum height */
+}
+
+#header {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 5px; /* Padding for header */
+  cursor: move; /* Cursor change for dragging */
+  border-radius: 10px 10px 0 0; /* Rounded corners */
 }
 
 #timeSpent {
-  font-size: 28px; /* גודל טקסט */
+  font-size: 24px;
   font-weight: bold;
-  color: #333; /* צבע טקסט */
-}
-
-p {
-  margin: 5px 0; /* רווח סביב פסקאות */
-}
-
-button {
-  margin-top: 10px; /* רווח מעל כפתור */
-  padding: 10px; /* רווח פנימי בכפתור */
-  font-size: 16px; /* גודל טקסט בכפתור */
-  cursor: pointer; /* סמן לגרירה */
+  color: #333;
 }
