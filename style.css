@@ -21,7 +21,7 @@ body {
 }
 
 #timeSpent {
-  font-size: 24px; /* גודל טקסט */
+  font-size: 28px; /* גודל טקסט */
   font-weight: bold;
   color: #333; /* צבע טקסט */
 }
